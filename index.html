@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tennis Training Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
+
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+
+<div class="container">
+
+<div class="calendar">
+
+<div class="header">
+<button id="prev"><</button>
+<h2 id="monthYear"></h2>
+<button id="next">></button>
+</div>
+
+<div class="week">
+<div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+<div>Thu</div><div>Fri</div><div>Sat</div>
+</div>
+
+<div class="days" id="days"></div>
+
+</div>
+
+<div class="panel">
+
+<h2>🎾 Training Schedule</h2>
+<div id="eventList"></div>
+
+<div class="stats">
+<h3>📊 Training Stats</h3>
+<p id="totalSessions">Total Sessions: 0</p>
+
+<div>Practice</div>
+<div class="bar" id="practiceBar"></div>
+
+<div>Matches</div>
+<div class="bar" id="matchBar"></div>
+
+</div>
+
+<h3>🏆 Tournament Tracker</h3>
+<div class="event">SCUAA Regional Qualifier</div>
+<div class="event">University Tennis Cup</div>
+<div class="event">City Open Tournament</div>
+
+</div>
+</div>
+
+<div class="popup" id="popup">
+
+<h3>Add Training</h3>
+
+<input id="playerName" placeholder="Player Name">
+<input id="eventType" placeholder="Practice / Match">
+<input type="time" id="eventTime">
+
+<button onclick="saveEvent()">Save</button>
+<button onclick="closePopup()">Cancel</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
